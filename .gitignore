@@ -1,0 +1,17 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Generated vector database (recreated by running the notebook)
+chroma_web_rag_db/
+chroma_*/ 
+
+#IDE
+.vscode/
