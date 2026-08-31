@@ -26,13 +26,13 @@ The 3 documents are split into 36 chunks (`a01`: 11, `a04`: 13, `a05`: 12) and s
 
 ```mermaid
 flowchart LR
-    A[OWASP Top 10 pages] --> B[Document Loading<br/>WebBaseLoader]
-    B --> C[Chunking<br/>RecursiveCharacterTextSplitter<br/>size=1200 overlap=200]
-    C --> D[Gemini Embeddings<br/>models/gemini-embedding-001]
-    D --> E[(Chroma<br/>local vector DB)]
-    Q[User question] --> F[Retrieval<br/>similarity search top-k]
+    A[OWASP Top 10 pages] --> B[Document Loading\nWebBaseLoader]
+    B --> C[Chunking\nRecursiveCharacterTextSplitter\nsize=1200 overlap=200]
+    C --> D[Gemini Embeddings\nmodels/gemini-embedding-001]
+    D --> E[(Chroma\nlocal vector DB)]
+    Q[User question] --> F[Retrieval\nsimilarity search top-k]
     E --> F
-    F --> G[Gemini chat model<br/>two-step chain or agent]
+    F --> G[Gemini chat model\ntwo-step chain or agent]
     G --> H[Answer + sources]
 ```
 
